@@ -2,7 +2,7 @@ module MicrosoftTranslator
   class Client
 
     def initialize(subscription_id)
-      @subscription_id = client_secret
+      @subscription_id = subscription_id
       raise "subscription_id must be a string" unless @subscription_id.is_a?(String)
       @auth = MicrosoftTranslator::AzureAuthentication.new(subscription_id)
     end
